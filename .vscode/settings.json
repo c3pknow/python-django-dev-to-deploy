@@ -1,6 +1,15 @@
 {
-  "python.pythonPath": "/anaconda3/bin/python",
+  "python.pythonPath": "./btre-real-estate-site/venv/bin/python",
   "files.exclude": {
-    "__error": "Not found"
+    "__error": "Not found",
+    "python_sandbox_starter": true,
+    "*.DS_Store": true,
+    "*.DS_Store.*": true,
+    "*.git": true,
+    "*.git.*": true,
+    "*python_sandbox_finished": true,
+    "*python_sandbox_finished.*": true,
+    "*python_sandbox_starter": true,
+    "*python_sandbox_starter.*": true
   }
 }
