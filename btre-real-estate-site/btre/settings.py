@@ -24,6 +24,9 @@ SECRET_KEY = 't9=!7)9p+65mq7913fma0kx0qtpkj4j#a+q7(#m8)^vp^f=f90'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+POSTGRES_PASS = os.environ.get('POSTGRES_DB_PASS')
+
 
 ALLOWED_HOSTS = []
 
@@ -78,8 +81,11 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'btredb',
+        'USER': 'postgres',
+        'PASSWORD': os.environ.get('POSTGRES_DB_PASS'),
+        'HOST': 'localhost'
     }
 }
 
